@@ -7,14 +7,20 @@ html body {
     min-height: 100%;
 }
 .topbar {
+	position: fixed; /* 画面の最上部に固定 */
+	background-color: white;
+	opacity: 0.6;
+	top: 0;
+    left: 0;
     width: 100%;
-    height: 5em;
+    height: 14vh;
     display: flex;
     font-family: 'Noto Sans JP', sans-serif;
+     z-index: 1000;
 }
 .logo {
-    width: 60%;
-    height: 5em;
+    width: 50%;
+    height: 14vh;
     display: flex;
     align-items: center;
 }
@@ -23,13 +29,105 @@ html body {
     margin-left: 2em;
 }
 .menu {
-    width: 40%;
+    width: 50%;
     box-sizing: border-box;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
+.menu a {
+	text-decoration: none;
+	margin-right: 10%;
+}
 .menu span {
-    margin-left: 15%;
-    font-size: 1.3em;
+    font-size: 1.0em;
     font-weight: 700;
+    color: black;
+}
+
+.main-img {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+    margin-top: 14vh;
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.slides {
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    width: 300%;
+    display: flex;
+}
+
+.slide {
+	height: 100%;
+    width: 33.3333%;
+    display: block;
+}
+.red {
+	background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.green {
+	background-color: green;
+}
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #555;
+}
+.news {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+.news h2{
+	font-size: 2.0em;
+	text-align: center;
+}
+.news-one {
+    background-color: #f7f7f7;
+	height: 8em;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: black;
+}
+.news-top {
+	height: 2em;
+}
+.news-top p {
+	margin-top: 2em;
+	margin-left: 1em;
+}
+.news-main {
+	height: 6em;
+}
+.news-main p {
+	margin-left: 2em;
 }
